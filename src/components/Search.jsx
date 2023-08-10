@@ -3,8 +3,8 @@ import "./Search.css";
 import axios from "axios";
 import CurrentWeather from "./CurrentWeather";
 import Forecast from "./Forecast";
+import { Button, Container, TextField } from "@mui/material";
 
-// const API_KEY = "c3606b4cb3e49273488081b7e1a65c2a";
 // const GEO_API_URL = "http://api.openweathermap.org/geo/1.0/direct";
 // const WEATHER_API_URL = "https://api.openweathermap.org/data/2.5/weather";
 
@@ -14,9 +14,10 @@ export default function Search() {
   const [longitude, setLongitude] = useState(0);
   const [weather, setWeather] = useState("");
   const [description, setDescription] = useState("");
-  const [temp, setTemp] = useState(0);
+  const [temp, setTemp] = useState(null);
   const [showWeather, setShowWeather] = useState(true);
   const [showForecast, setShowForecast] = useState(false);
+  const [weatherId, setWeatherId] = useState(0)
   // const [showForecast, setShowForecast] = useState(false);
 
   // useEffect(() => {
@@ -52,12 +53,14 @@ export default function Search() {
   const fetchWeatherData = (lat, lon) => {
     axios.get(`http://localhost:3001/location/weather/${lat}/${lon}`)
       .then((res) => {
-        console.log(res.data);
+        // console.log(res.data);
         const data = res.data;
         if (data) {
           setWeather(data.weather[0].main);
           setDescription(data.weather[0].description);
           setTemp(data.main.temp);
+          setWeatherId(data.weather[0].id)
+          
         }
       })
       .catch((error) => {
@@ -75,32 +78,33 @@ export default function Search() {
   };
 
   return (
-    <section>
-      <div>
-        <input
+    <>
+      
+        <TextField id="outlined-basic" label="Location" variant="outlined"
           type="text"
           value={location}
           onChange={(e) => setLocation(e.target.value)}
         />
-        <button onClick={handleSearch}>Search</button>
-
+        <Button sx={{m: 1}} variant="contained" onClick={handleSearch}>Search</Button>
+      
         {showWeather ? (
           <CurrentWeather
             weather={weather}
             description={description}
             temp={temp}
+            weatherId={weatherId}
           />
         ) : (
-          <section>
-            <Forecast lat={latitude} lon={longitude} API={API_KEY} />
-          </section>
+          <Container>
+            <Forecast lat={latitude} lon={longitude}  />
+          </Container>
         )}
 
-        <div>
-          <button onClick={toggleWeather}>Current</button>
-          <button onClick={toggleForecast}>5 day</button>
-        </div>
-      </div>
-    </section>
+        <Container>
+          <Button sx={{m: 2.5}} variant="contained" onClick={toggleWeather}>Current</Button>
+          <Button sx={{m: 2.5}} variant="contained" onClick={toggleForecast}>3 day</Button>
+        </Container>
+      
+    </>
   );
 }
