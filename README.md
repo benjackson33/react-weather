@@ -1,6 +1,6 @@
-# App Title
+# Jaxun Weather Service
 
-I have built a minimal design weather forcasting app using API calls to and express.js backend to retrieve the data. 
+I have built a minimal design weather forcasting app with React.js using API calls to and Express.js backend.
 
 ## Screenshot(s)
 
@@ -25,7 +25,7 @@ This app is yet to be deployed
 
 I started the project with some basic wire frames. I wanted a mininmal design without too much noise, keeping it easy on the eyes.
 
-![Wireframes](./public/wireframes.jpg)
+<img src="./public/wireframes.jpg" alt="Wireframes" width="350px">
 
 I also used a trello board to keep myself on track and jave the satisfaction of dragging over the completed tasks.
 
@@ -42,7 +42,7 @@ A few addtions and changes I want to make:
 
 I orginally started making this completely client side, making the API calls from the client. I then refactored the app to make the calls to a express.js backend, for the practice on backend infrastrcutrue and keeping secrets secure. The refactroing process gave me a spot of bother, issues routing and data getting a bit mixed up in places. 
 
-I think a sense of rushing was part of the issue, which ironcially slowed me down in the end with the errors. I overcame the problems by being more mehtodical, logging step by step and making sure the required data was being given. A good lesson learned. 
+Potential cause of issues was a sense of rushing, which ironcially slowed me down in the end with the errors. I overcame the problems by being more mehtodical, logging step by step and making sure the required data was being given. A good lesson learned. 
 
 
 ## Next Steps?
