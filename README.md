@@ -29,7 +29,7 @@ I started the project with some basic wire frames. I wanted a mininmal design wi
 
 I also used a trello board to keep myself on track and jave the satisfaction of dragging over the completed tasks.
 
-### Planned extra features
+### Extra features
 
 A few addtions and changes I want to make:
 
