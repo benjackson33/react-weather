@@ -21,11 +21,10 @@ Here are the technologies and tools used to build this project:
 
 ### Deployment
 
-- [Link to Deployed App](#) - Insert the link to your deployed app here.
 
 ### Project Planning
 
-- [Trello Board](#) - Link to your Trello board that includes user stories, wireframes, and an ERD.
+
 
 ### Hurdles
 
