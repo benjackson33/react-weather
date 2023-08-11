@@ -9,7 +9,7 @@ I have built a minimal design weather forcasting app with React.js using API cal
 
 ## Technologies and Tools
 
-Here are the technologies and tools used to build this project:
+Technologies and tools used to build this project:
 
 <img src="https://cdn.svgporn.com/logos/react.svg" alt="React" height="20px">  React
 <img src="https://cdn.svgporn.com/logos/express.svg" alt="Express.js" height="20px">  Express.js
