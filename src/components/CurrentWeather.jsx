@@ -8,7 +8,7 @@ import thunder from './thunder.png';
 import snow from './snow.png';
 import './CurrentWeather.css'
 
-export default function Weather({ weather, description, temp, weatherId }) {
+export default function Weather({ description, temp, weatherId }) {
   const weatherConditions = {
     thunder: [200, 201, 202, 210, 211, 212, 221, 230, 231, 232],
     rain: [300, 301, 302, 310, 311, 312, 313, 314, 321, 500, 501, 502, 503, 504, 511, 520, 521, 522, 531],
@@ -47,9 +47,9 @@ export default function Weather({ weather, description, temp, weatherId }) {
   return (
     <Box>
       {weatherImageComponent}
-      <Typography className={weather}>{weather}</Typography>
+      {/* <Typography className={weather}>{weather}</Typography> */}
       <p>{description}</p>
-      <p>{Math.trunc(temp - 273.15)}&deg;C</p>
+      {temp && <p>{Math.trunc(temp - 273.15)}&deg;C</p>}
     </Box>
   );
 }
