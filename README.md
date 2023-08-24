@@ -2,7 +2,7 @@
 
 I have built a minimal design weather forcasting app with React.js using API calls to and Express.js backend.
 
-## Screenshots/Demo
+## Demo
 
 ![Demo](./public/jaxun-weather.gif)
 
