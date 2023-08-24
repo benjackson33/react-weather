@@ -7,8 +7,7 @@ I have built a minimal design weather forcasting app with React.js using API cal
 ![Demo](./public/jaxun-weather.gif)
 
 
-![landin](./public/jaxun-weather-landing.png)
-![three day](./public/jaxun-weather.png)
+
 
 ## Technologies and Tools
 
