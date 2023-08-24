@@ -2,8 +2,28 @@ import { useEffect, useState } from "react";
 import { Box, Card, CardContent, Typography } from '@mui/material';
 import { format } from 'date-fns';
 import axios from "axios";
+import { keyframes } from '@emotion/react';
+import styled from '@emotion/styled';
 import "./Forecast.css";
+
 import WeatherCard from "./WeatherCard";
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+
+// Create a styled component with the animation
+const AnimatedCard = styled(Card)`
+  width: 250px;
+  height: 400px;
+  animation: ${fadeIn} 0.75s ease-in-out;
+`;
+
 
 export default function Forecast({ lat, lon, weatherId }) {
   const [weatherData, setWeatherData] = useState([]);
@@ -14,7 +34,7 @@ export default function Forecast({ lat, lon, weatherId }) {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/forecast/${lat}/${lon}`)
+      .get(`https://express-server-i88j.onrender.com/forecast/${lat}/${lon}`)
       .then((res) => {
         // console.log(data);
         setWeatherData(res.data.list);
@@ -38,32 +58,29 @@ export default function Forecast({ lat, lon, weatherId }) {
   return (
     <Box sx={{ display: 'flex', justifyContent: 'space-evenly', alignContent: 'space-between' }}>
       {Object.keys(groupedByDate)
-        .slice(0, 3) // Take only the first three days' data
+        .slice(0, 3)
         .map((date) => {
           const formattedDate = format(new Date(date), 'EEEE'); 
   
           return (
-            <Card spacing={20} className="weather-card" key={date} variant="outlined" sx={{ width: '250px', height: '400px'}} > {/* Adjust the width and height */}
+            <AnimatedCard key={date} variant="outlined">
               <CardContent sx={{ maxHeight: '350px', overflow: 'auto'}}>
                 <Typography variant="h6" component="h2">
                   {formattedDate} 
                 </Typography>
                 {groupedByDate[date].map((item, index) => (
-
                   <WeatherCard 
-                  item={item} 
-                  index={index}
-                  weatherId={weatherId}
+                    item={item} 
+                    index={index}
+                    weatherId={weatherId}
                   />
-
                 ))}
               </CardContent>
-            </Card>
+            </AnimatedCard>
           );
         })}
     </Box>
   );
-  
   
   
   
