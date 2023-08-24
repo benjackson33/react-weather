@@ -2,9 +2,11 @@
 
 I have built a minimal design weather forcasting app with React.js using API calls to and Express.js backend.
 
-## Screenshot(s)
+## Screenshots/Demo
 
-![Alt Text](./public/jaxun-weather-landing.png)
+[![Video Thumbnail](./public/jaxun-weather-landing.png)](./public/Screen%20Recording%202023-08-24%20at%2013.13.51.mov)
+
+
 ![Alt Text](./public/jaxun-weather.png)
 
 ## Technologies and Tools
