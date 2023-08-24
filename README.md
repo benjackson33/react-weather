@@ -4,9 +4,10 @@ I have built a minimal design weather forcasting app with React.js using API cal
 
 ## Screenshots/Demo
 
-[![Video Thumbnail](./public/jaxun-weather-landing.png)](./public/Screen%20Recording%202023-08-24%20at%2013.13.51.mov)
+![Video Thumbnail](./public/jaxun-weather.gif)
 
 
+![Alt Text](./public/jaxun-weather-landing.png)
 ![Alt Text](./public/jaxun-weather.png)
 
 ## Technologies and Tools
