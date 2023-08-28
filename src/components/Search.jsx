@@ -39,7 +39,7 @@ export default function Search() {
 
   const fetchWeatherData = (lat, lon) => {
     axios
-      .get(`http://localhost:3001/location/weather/${lat}/${lon}`)
+      .get(`https://express-server-i88j.onrender.com/${lat}/${lon}`)
       .then((res) => {
         const data = res.data;
         if (data) {
