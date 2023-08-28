@@ -34,7 +34,7 @@ export default function Forecast({ lat, lon, weatherId }) {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/forecast/${lat}/${lon}`)
+      .get(`https://express-server-i88j.onrender.com/${lat}/${lon}`)
       .then((res) => {
         // console.log(data);
         setWeatherData(res.data.list);
