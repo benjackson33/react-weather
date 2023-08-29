@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 import sun from './sun.png';
 import cloud from './cloud.png';
 import rain from './rain.png';

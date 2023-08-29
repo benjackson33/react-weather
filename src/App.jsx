@@ -10,11 +10,6 @@ import '@fontsource-variable/montserrat';
 
 function App() {
 
-//   const theme = createTheme({
-//     typography: {
-//       fontFamily: 'Raleway, Arial',
-//     }
-//   )}
 
 
 
@@ -29,7 +24,6 @@ function App() {
             </Typography>
           </Grid>
           <Grid item>
-            {/* Replace 'your-image-url.jpg' with the actual image URL */}
             <img src={jw} style={{ width: '50px', height: 'auto' }} />
           </Grid>
         </Grid>

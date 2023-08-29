@@ -69,13 +69,12 @@ export default function FirstWeatherCard({ item, index, weatherId }) {
         {new Date(item.dt_txt).toLocaleString("en-GB", {
           hour: "numeric",
           hour12: true,
-          hourCycle: "h12", // Add this line to ensure 12-hour cycle
+          hourCycle: "h12", 
         }).replace(/^0/, "12")}{" "}
         </Typography>
         <Typography variant="body1">
           {weatherImageComponent}
 
-          {/* {item.weather[0].description.split("")} */}
         </Typography>
         <Typography variant="body1">
           {Math.trunc(item.main.temp - 273.15)}&deg;C
